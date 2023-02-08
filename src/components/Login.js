@@ -56,7 +56,7 @@ function Login() {
     let token =  sessionStorage.getItem('token');
 
     return (
-        <> 
+        <>          
         { token && <Navigate to="/listado" replace />}
             <h2>Formulario de Login</h2>
             <form onSubmit={submitHandler}>

@@ -1,0 +1,44 @@
+/* .font-koulen{
+
+    font-family: 'Koulen', cursive;
+}
+
+.font-barlow{
+
+    font-family: 'Barlow', sans-serif;
+    ;
+} */
+
+
+/* listado */
+
+#listado {
+    position: relative;
+    margin-bottom: 200px;
+
+}
+
+.favourite-btn {
+    width: 30px;
+    height: 30px;
+    background-color: blue ;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+
+}
+
+/* resultados */
+
+#resultados {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+
+

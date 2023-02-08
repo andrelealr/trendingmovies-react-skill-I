@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "axios";
-import { getMouseEventOptions } from "@testing-library/user-event/dist/utils";
+
 
 function Detalle () {
     let token =  sessionStorage.getItem('token');

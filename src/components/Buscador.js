@@ -7,10 +7,7 @@ function Buscador () {
   const submitHandler = e => {
     e.preventDefault();
 
-   
     const keyword = e.currentTarget.keyword.value.trim();
-
-    console.log(keyword)
 
   //  Validación formulario
     if(keyword.length === 0) {
@@ -18,6 +15,7 @@ function Buscador () {
     } else if (keyword.length < 4) {
       swal (<h4>Ingresa más de 4 caracteres</h4>)
     } else {
+      e.currentTarget.keyword.value = '';
       navigate(`/resultados?keyword=${keyword}`)
     }
   }
