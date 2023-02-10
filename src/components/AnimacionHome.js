@@ -3,11 +3,11 @@ import '../css/app.css'
 
 function animacionHome() {
     return (
-        <section className="tendring-tittle">
-            <h1 className="mt-5 pt-5 mb-3 text-center">En Trending Movies encuentra</h1>
+        <section className="trending-tittle text-white">
+            <h1 className="mb-3 text-center">En Trending Movies encuentras</h1>
             <h1 className="mb-3 text-center">   
                 <Typical
-                loop = {1}
+                loop = {Infinity}
                 wrapper = "b"
                 steps={[
                 'los estrenos',
@@ -17,9 +17,9 @@ function animacionHome() {
                 1000,
                 'los ratings',
                 1000,
-                'y mucho mas',
+                'y mucho más',
                 1000,
-                'de tus peliculas',
+                'de tus películas',
                 1000,
                 'favoritas',
                 1000,

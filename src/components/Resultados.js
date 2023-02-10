@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import swal from "@sweetalert/with-react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 function Resultados () {
 
@@ -18,7 +19,7 @@ function Resultados () {
                 const movieArray= response.data.results;
 
                 if (movieArray.length === 0) {
-                    swal (<h4>Tu búsqueda no arrojo resultados. Vuelve a intentarlo</h4>);
+                    Swal (<h4>Tu búsqueda no arrojo resultados. Vuelve a intentarlo</h4>);
                 } 
 
                 setMoviesResults(movieArray);
@@ -31,7 +32,7 @@ function Resultados () {
 
     return(
         <>
-        <h2>Buscaste <em>{keyword}</em></h2>
+        <h2 className="buscaste-tittle text-white text-center">Buscaste <em>{keyword}</em></h2>
         {moviesResults.length === 0 && <h3>No hay resultados</h3>}
             <div className="row" id="resultados">
         {

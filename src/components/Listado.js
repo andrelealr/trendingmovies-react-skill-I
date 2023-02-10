@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
-import swal from '@sweetalert/with-react';
-import '../css/app.css'
+import Swal from 'sweetalert2';
+import '../css/app.css';
 
-function Listado (props) {
+function Listado () {
     let token =  sessionStorage.getItem('token');
-
-    console.log(props);
 
     const [moviesList, setMoviesList ] = useState([]);
 
@@ -20,8 +18,8 @@ function Listado (props) {
                 setMoviesList(apiData.results);
             })
             .catch(error => 
-                swal (
-                    <h2>Hubo errores, intenta mas tardes</h2>
+                Swal.fire (
+                    '<h2>Hubo errores, intenta mas tardes</h2>'
                 )
             )
     }, [setMoviesList]);
@@ -30,6 +28,7 @@ function Listado (props) {
 
     return (
         <>
+        <h2 className="buscaste-tittle text-white text-center">Novedades en películas</h2>
         {/* Proteccion de ruta login / renderizado condicional */}
         { !token && <Navigate to="/" replace />}
       

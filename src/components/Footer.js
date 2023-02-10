@@ -7,9 +7,9 @@ function Footer() {
             <footer className="bg-dark text-center text-white sticky-bottom">
                 <div className="p-4 pb-0">
                     <section>
-                        <FaFacebook size="30" className="me-3" />
-                        <FaTwitter size="30" className="me-3"/>
-                        <FaInstagram size="30" />
+                        <FaFacebook size="20" className="me-3" />
+                        <FaTwitter size="20" className="me-3"/>
+                        <FaInstagram size="20" />
                     </section>
                 </div>
                 <div className="text-center p-3">

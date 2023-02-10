@@ -14,19 +14,14 @@ import './css/app.css'
 
 function App() {
 
-  const addOrRemoveFromFavs = () => {
-    console.log('Ok funciono');
-  }
-
   return (
     <>
     <Header />
-    <AnimacionHome />
 
       <div className="container">
         <Routes>
           <Route path='/' element={<Login />} />
-          <Route path='/listado' render={ (props) => <Listado addOrRemoveFromFavs={addOrRemoveFromFavs} {...props} />} />
+          <Route path='/listado' element={<Listado />} />
           <Route path='/detalle' element={<Detalle />} />
           <Route path='/resultados' element={<Resultados />} />
         </Routes>
