@@ -32,26 +32,28 @@ function Resultados () {
 
     return(
         <>
-        <h2 className="buscaste-tittle text-white text-center">Buscaste <em>{keyword}</em></h2>
-        {moviesResults.length === 0 && <h3>No hay resultados</h3>}
-            <div className="row" id="resultados">
-        {
-            moviesResults.map((oneMovie) => {
-                return(
-                    <div className="col-4 my-5"  key={oneMovie.id}>
-                        <div className="card">  
-                            <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top " alt="..."/>
-                            <div className="card-body">
-                                <h5 className="card-title mb-3">{ oneMovie.title.substring(0,30) }...</h5>
-                                <Link to={`/detalle?movieID=${oneMovie.id}`} className="btn btn-primary">Ver detalle</Link>
+        <h2 className="buscaste-tittle text-white text-center">Resultados de tu búsqueda: <br></br> <em>"{keyword}"</em></h2>
+        <div className="container">
+            {moviesResults.length === 0 && <h3>No hay resultados</h3>}
+                <div className="row" id="resultados">
+            {
+                moviesResults.map((oneMovie) => {
+                    return(
+                        <div className="col-4 my-5"  key={oneMovie.id}>
+                            <div className="card">  
+                                <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top " alt="..."/>
+                                <div className="card-body">
+                                    <h5 className="card-title mb-3">{ oneMovie.title.substring(0,30) }...</h5>
+                                    <Link to={`/detalle?movieID=${oneMovie.id}`} className="btn btn-primary">Ver detalle</Link>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                )
-            })
-        }
-      </div>
-        </>
+                    )
+                })
+            }
+                </div>
+         </div>
+    </>
     )
 }
 
