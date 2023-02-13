@@ -42,7 +42,7 @@ function Login() {
 
         // envió de la información del formulario
         axios
-            .post('http://challenge-react.alkemy.org', { email, password })
+            .post('https://challenge-react.alkemy.org', { email, password })
             .then (res => {  
                 Swal.fire (
                     '<h2>Excelente, ingresaste correctamente</h2>'
@@ -51,7 +51,12 @@ function Login() {
                     const tokenRecibido = res.data.token;
                     sessionStorage.setItem('token', tokenRecibido);
                     navigate('/listado');
-                });
+                })
+                .catch(error => 
+                    Swal.fire (
+                        '<h2>Ingrese correctamente el usuario</h2>'
+                    )
+                )
     }
 
     let token =  sessionStorage.getItem('token');
