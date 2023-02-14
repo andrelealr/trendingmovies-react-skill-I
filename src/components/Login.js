@@ -42,7 +42,7 @@ function Login() {
 
         // envió de la información del formulario
         axios
-            .post('http//challenge-react.alkemy.org', { email, password })
+            .post('http://challenge-react.alkemy.org', { email, password })
             .then (res => {  
                 Swal.fire (
                     '<h2>Excelente, ingresaste correctamente</h2>'
