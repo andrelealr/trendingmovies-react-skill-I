@@ -51,8 +51,8 @@ function Listado () {
                             <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top" alt="..."/>
                             {/* <button className="favourite-btn"></button> */}
                             <div className="card-body">
-                                <h5 className="card-title">{ oneMovie.title.substring(0,30) }...</h5>
-                                <p className="card-text">{ oneMovie.overview.substring(0,300) }...</p>
+                                <h5 className="card-title">{ oneMovie.title.substring(0,50) }...</h5>
+                                {/* <p className="card-text">{ oneMovie.overview.substring(0,300) }...</p> */}
                                 <Link to={`/detalle?movieID=${oneMovie.id}`} className="btn btn-primary">Ver detalle</Link> {/* redirection a una ruta en particular o especifica*/}
                             </div>
                         </div>
