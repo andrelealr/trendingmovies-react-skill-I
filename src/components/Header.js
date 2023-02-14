@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import Buscador from './Buscador';
+import AnimacionHome from './AnimacionHome';
 
 function Header() {
     return (
+        <>
         <header>
             <nav className="navbar navbar-expand-lg bg-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand text-white fw-bold" href="#home">Trending Movies</a>
+                    <a className="navbar-brand text-white fw-bold" href="/">Trending Movies</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -15,9 +17,9 @@ function Header() {
                             <li className="nav-item">
                                 <Link  className="nav-link text-white " aria-current="page" to='/'>Home</Link>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link text-white" to='/listado'>Listado</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link className="nav-link text-white" to='/contacto'>Contacto</Link>
                             </li>
@@ -27,6 +29,9 @@ function Header() {
                 <Buscador />
             </nav>
         </header>
+        <AnimacionHome /> 
+        </>
+        
     )
 
 };

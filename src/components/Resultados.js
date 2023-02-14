@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 
 function Resultados () {
 
@@ -32,7 +31,7 @@ function Resultados () {
 
     return(
         <>
-        <h2 className="buscaste-tittle text-white text-center">Resultados de tu búsqueda: <br></br> <em>"{keyword}"</em></h2>
+        <h2 className="buscaste-tittle text-center">Resultados de tu búsqueda: <br></br> <em>"{keyword}"</em></h2>
         <div className="container">
             {moviesResults.length === 0 && <h3>No hay resultados</h3>}
                 <div className="row" id="resultados">

@@ -18,7 +18,7 @@
 
 #listado {
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 
 }
 
@@ -42,19 +42,30 @@
 #resultados {
     position: relative;
     margin-bottom: 200px;
+
 }
 
 .trending-tittle {
     padding: 100px 100px;
     background-image: linear-gradient(135deg, #7989fb 0, #486ee5 50%, #0054cf 100%);
-    
+
 }
 
 .trending-tittle h1 {
     font-size: 45px;
+
 }
 
 .buscaste-tittle {
-    background-image: linear-gradient(135deg, #7989fb 0, #486ee5 50%, #0054cf 100%);
-    padding: 30px  30px;
+    padding: 100px 60px 20px;
+
+}
+
+#contacto {
+    padding: 40px 200px;
+
+}
+
+#detalle {
+    margin-top: 100px;
 }
